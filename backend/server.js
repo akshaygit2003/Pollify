@@ -24,8 +24,8 @@ app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/poll", pollRoutes);
 
 // Server uploads folder
-// app.use("/uploads", express.static(path.join(_dirname, "/uploads")));
-app.use("/uploads", express.static("/tmp/"));
+app.use("/uploads", express.static(path.join(_dirname, "/uploads")));
+// app.use("/uploads", express.static("/tmp/"));
 app.use(express.static(path.join(_dirname, "/frontend/vite-project/dist")));
 app.get("*", (_, res) => {
   res.sendFile(

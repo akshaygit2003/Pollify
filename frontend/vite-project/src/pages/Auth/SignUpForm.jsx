@@ -53,7 +53,7 @@ const SignUpForm = () => {
     try {
       if (profilePic) {
         const imageUploadRes = await uploadImage(profilePic);
-        // console.log("Image upload response:", imageUploadRes); // Debugging
+        console.log("Image upload response:", imageUploadRes); // Debugging
         profileImageUrl = imageUploadRes.imageUrl || "";
       }
       const response = await axiosInstance.post(API_PATHS.AUTH.REGISTER, {

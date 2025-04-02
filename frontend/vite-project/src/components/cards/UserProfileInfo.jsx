@@ -16,13 +16,16 @@ const UserProfileInfo = ({ imgUrl, fullname, username, createdAt }) => {
       )}
       <div>
         <p className="text-sm text-black font-medium leading-4">
-          {fullname} <span className="mx-1 text-gray-500 text-sm">•</span>
-          <span className="text-gray-500  mx-1 text-[10px]">
+          {fullname}{" "}
+          <span className="mx-1 max-sm:hidden text-gray-500 text-sm">•</span>
+          <span className="text-gray-500 max-sm:hidden mx-1 text-[10px]">
             {" "}
             {createdAt && moment(createdAt).fromNow()}
           </span>
         </p>
-        <span className="text-slate-500 text-sm  leading-4">@{username}</span>
+        <span className="text-slate-500 text-sm max-sm:hidden leading-4">
+          @{username}
+        </span>
       </div>
     </div>
   );
